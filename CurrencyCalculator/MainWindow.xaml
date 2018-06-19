@@ -10,6 +10,7 @@
 
         <Label></Label>
         <ComboBox Name="ChooseVal" Height="50" Width="200" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <!--lalala-->
             <TextBlock>USD</TextBlock>
             <TextBlock>UAN</TextBlock>
             <TextBlock>RUB</TextBlock>
