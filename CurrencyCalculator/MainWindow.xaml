@@ -9,13 +9,22 @@
     <Grid>
 
         <Label></Label>
-        <ComboBox Name="ChooseVal" Height="50" Width="200" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <!--lalala-->
+        <ComboBox Name="ChooseVal" Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Center">
             <TextBlock>USD</TextBlock>
             <TextBlock>UAN</TextBlock>
             <TextBlock>RUB</TextBlock>
             <TextBlock>EUR</TextBlock>
             <TextBlock>PLN</TextBlock>
         </ComboBox>
+        <Grid>
+        <ComboBox Name="ChooseVal1" Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <TextBlock>USD</TextBlock>
+            <TextBlock>UAN</TextBlock>
+            <TextBlock>RUB</TextBlock>
+            <TextBlock>EUR</TextBlock>
+            <TextBlock>PLN</TextBlock>
+        </ComboBox>
+            <Button x:Name="Button1" Content="Bibi1" Click="Button1_Click"/>
+        </Grid>
     </Grid>
 </Window>
