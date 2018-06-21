@@ -27,10 +27,7 @@ namespace CurrencyCalculator
 
         private void Button1_Click(object sender, RoutedEventArgs e)
         {
-            foreach (var item in collection)
-            {
-
-            }
+           
         }
     }
 }

@@ -5,26 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CurrencyCalculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="351.695" Width="296.186">
-    <Grid>
+        Title="MainWindow" Height="366.924" Width="259">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="0,10"/>
+            <Setter Property="BorderBrush" Value="Lime"/>
+            <Setter Property="Grid.Column" Value="1"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="25"/>
+        </Style>
 
-        <Label></Label>
-        <ComboBox Name="ChooseVal" Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <TextBlock>USD</TextBlock>
-            <TextBlock>UAN</TextBlock>
-            <TextBlock>RUB</TextBlock>
-            <TextBlock>EUR</TextBlock>
-            <TextBlock>PLN</TextBlock>
-        </ComboBox>
-        <Grid>
-        <ComboBox Name="ChooseVal1" Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Center">
-            <TextBlock>USD</TextBlock>
-            <TextBlock>UAN</TextBlock>
-            <TextBlock>RUB</TextBlock>
-            <TextBlock>EUR</TextBlock>
-            <TextBlock>PLN</TextBlock>
-        </ComboBox>
-            <Button x:Name="Button1" Content="Bibi1" Click="Button1_Click"/>
-        </Grid>
+        <Style TargetType="Image">
+            <Setter Property="Width" Value="20"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Grid.Column" Value="0"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="1" 
+               Content="Currency Converter"
+                FontSize="23" Margin="0,10,1,0"/>
+        <Image  Grid.Row="5" Source="Images/euro.png" />
+        <Image  Grid.Row="1" Source="Images/pol.png" />
+        <Image  Grid.Row="2" Source="Images/rus.png" />
+        <Image  Grid.Row="3" Source="Images/ukr.png" />
+        <Image  Grid.Row="4" Source="Images/usd.png" />
+
+        <TextBox  x:Name="euro" Grid.Row="1"/>
+        <TextBox  x:Name="pol" Grid.Row="2"/>
+        <TextBox  x:Name="rus" Grid.Row="3"/>
+        <TextBox  x:Name="ukr" Grid.Row="4" />
+        <TextBox  x:Name="usd" Grid.Row="5" />
     </Grid>
 </Window>
