@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: CurrencyCalculator, Configuration: Debug Any CPU ------
+1>  CurrencyCalculator -> C:\Users\Yana\Source\Repos\WpfApplication13\CurrencyCalculator\bin\Debug\CurrencyCalculator.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

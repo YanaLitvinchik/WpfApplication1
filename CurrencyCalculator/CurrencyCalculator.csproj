@@ -95,7 +95,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\1.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\euro.png" />
     <Resource Include="Images\pol.png" />

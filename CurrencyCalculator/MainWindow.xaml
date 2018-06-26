@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CurrencyCalculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="366.924" Width="259">
+        Title="MainWindow" Height="310.924" Width="284">
     <Window.Resources>
         <Style TargetType="TextBox">
             <Setter Property="Width" Value="100"/>
@@ -16,7 +16,10 @@
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
             <Setter Property="FontSize" Value="25"/>
         </Style>
-
+        <LinearGradientBrush x:Key="brush2">
+            <GradientStop Color="Blue" Offset="0"/>
+            <GradientStop Color="Red" Offset="0.5"/>
+        </LinearGradientBrush>
         <Style TargetType="Image">
             <Setter Property="Width" Value="20"/>
             <Setter Property="Margin" Value="10"/>
@@ -24,6 +27,9 @@
         </Style>
     </Window.Resources>
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/1.jpg" />
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition />
@@ -34,21 +40,16 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Grid.Column="1" 
-               Content="Currency Converter"
-                FontSize="23" Margin="0,10,1,0"/>
-        <Image  Grid.Row="5" Source="Images/euro.png" />
-        <Image  Grid.Row="1" Source="Images/pol.png" />
+        <Image  Grid.Row="1" Source="Images/euro.png" />
+        <Image  Grid.Row="4" Source="Images/ukr.png" />
         <Image  Grid.Row="2" Source="Images/rus.png" />
-        <Image  Grid.Row="3" Source="Images/ukr.png" />
-        <Image  Grid.Row="4" Source="Images/usd.png" />
+        <Image  Grid.Row="3" Source="Images/usd.png" />
 
-        <TextBox  x:Name="euro" Grid.Row="1"/>
-        <TextBox  x:Name="pol" Grid.Row="2"/>
-        <TextBox  x:Name="rus" Grid.Row="3"/>
-        <TextBox  x:Name="ukr" Grid.Row="4" />
-        <TextBox  x:Name="usd" Grid.Row="5" />
+        <Label Grid.Row="0" Grid.Column="1" Content="Currency exchange" FontFamily="Comic Sans MS" FontSize="23"/>
+        <TextBox  x:Name="euro" Grid.Row="1" KeyUp="TextBox_KeyUp" TextChanged="euro_TextChanged"/>
+        <TextBox x:Name="grn" Grid.Row="4" KeyUp="TextBox_KeyUp"/>
+        <TextBox  x:Name="rub" Grid.Row="2" KeyUp="TextBox_KeyUp"/>
+        <TextBox  x:Name="dollar" Grid.Row="3" KeyUp="TextBox_KeyUp"/>
     </Grid>
 </Window>
